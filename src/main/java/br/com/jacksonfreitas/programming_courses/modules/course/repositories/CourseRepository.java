@@ -12,10 +12,9 @@ public interface CourseRepository extends JpaRepository<CourseEntity, UUID>{
 
     Optional<CourseEntity> findByName(String name); //usado no create
 
-    Optional<CourseEntity> findById(UUID id); //usado no list one
+    Optional<CourseEntity> findById(UUID id); //usado no list one e update
 
     List<CourseEntity> findAll(); //usado no list 
 
     void deleteById(UUID id);
-    
 } 

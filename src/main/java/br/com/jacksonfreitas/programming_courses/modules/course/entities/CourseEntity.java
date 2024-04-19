@@ -4,6 +4,7 @@ import java.util.UUID;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import jakarta.persistence.Id;
@@ -17,9 +18,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import lombok.Data;
-
 @Data
 @Entity(name = "course")
+@DynamicUpdate
 public class CourseEntity {
 
     @Id
